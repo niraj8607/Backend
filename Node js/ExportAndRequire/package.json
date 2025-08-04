@@ -1,0 +1,12 @@
+{
+  "name": "exportandrequire",
+  "version": "1.0.0",
+  "main": "math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niraj Kumar",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
