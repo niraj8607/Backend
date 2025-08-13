@@ -1,0 +1,80 @@
+/* General page styles */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ece5dd;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page heading */
+h1 {
+    text-align: center;
+    color: #075e54;
+    margin: 20px 0;
+}
+
+/* Chat container wrapper */
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Single chat bubble */
+.chat-box {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 8px;
+    max-width: 70%;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Sender bubble (right) */
+.chat-box.sent {
+    background-color: #dcf8c6;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+/* Receiver bubble (left) */
+.chat-box.received {
+    background-color: #ffffff;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+/* Sender name */
+.from {
+    font-weight: bold;
+    color: #128c7e;
+    margin-bottom: 4px;
+}
+
+/* Message text */
+.msg {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Receiver name */
+.to {
+    font-size: 0.8em;
+    color: gray;
+    text-align: right;
+    margin-top: 4px;
+}
+
+/* Timestamp style */
+.time {
+    font-size: 0.7em;
+    color: gray;
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+}
