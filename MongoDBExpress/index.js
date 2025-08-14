@@ -48,6 +48,26 @@ app.post("/chats", async (req, res) => {
     res.redirect("/chats");
 });
 
+//edit route
+app.get("/chats/:id/edit", async (req, res) => {
+    let { id } = req.params;
+    let foundChat = await chat.findById(id);
+    res.render("edit", { chat: foundChat });
+});
+
+app.post("/chats/:id/update", async (req, res) => {
+    let { id } = req.params;
+    let { from, to, msg } = req.body;
+    await chat.findByIdAndUpdate(id, { from, to, msg });
+    res.redirect("/chats");
+});
+
+app.delete("/chats/:id", async (req, res) => {
+    let { id } = req.params;
+    await chat.findByIdAndDelete(id);
+    res.redirect("/chats");
+});
+
 app.get("/", (req, res) => {
     res.send("root is working");
 });

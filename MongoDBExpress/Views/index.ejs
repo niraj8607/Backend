@@ -12,16 +12,22 @@
         <button>New Chat</button>
     </form>
 
-    <% for(let chat of chats) { %>
-        <div class="chat-box">
-            <p class="from">From: <%= chat.from %></p>
-            <p class="msg"><%= chat.msg %></p>
-            <p class="to">Received by: <%= chat.to %></p>
-            <hr>
-            <p>Date: <%= chat.created_at.toLocaleDateString() %></p>
-<p>Time: <%= chat.created_at.toLocaleTimeString() %></p>
-        </div>
-    <% } %>
+ <% for (let chat of chats) { %>
+    <div class="chat-box">
+        <p class="from">From: <%= chat.from %></p>
+        <p class="msg"><%= chat.msg %></p>
+        <form action="/chats/<%= chat._id %>/edit" method="get">
+            <button>Edit</button>
+        </form>
+        <form action="/chats/<%= chat._id %>?_method=DELETE" method="post">
+    <button>Delete</button>
+</form>
+        <p class="to">Received by: <%= chat.to %></p>
+        <hr>
+        <p>Date: <%= chat.created_at.toLocaleDateString() %></p>
+        <p>Time: <%= chat.created_at.toLocaleTimeString() %></p>
+    </div>
+<% } %>
 
 </body>
 </html>
